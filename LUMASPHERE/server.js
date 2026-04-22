@@ -12,6 +12,9 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-key-change-in-pr
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 const MAX_USERS = process.env.MAX_USERS ? Number(process.env.MAX_USERS) : Infinity; // set to numeric value to cap accounts, default unlimited
 
 // Setup lowdb
