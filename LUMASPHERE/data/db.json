@@ -1,0 +1,268 @@
+{
+  "users": [
+    {
+      "id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "username": "wayne",
+      "email": "wayne.hated@gmail.com",
+      "password_hash": "$2a$10$1l8Th/pnmZ5ZPD9j1uPCkuMN1lI6ueJaoF5HthB42S1O4zM2UTvLa",
+      "profile_pic": "/uploads/1769469512392-qaDkq6sj.jpg",
+      "subscribers": 2,
+      "subscriptions": [
+        "TrQQXeekR5pMGLZZO2LFb",
+        "CrQtcDXnPAZo81LAYnCT9"
+      ]
+    },
+    {
+      "id": "TrQQXeekR5pMGLZZO2LFb",
+      "username": "KUTHA",
+      "email": "kutlorakaisa@gmail.com",
+      "password_hash": "$2a$10$lm.uka6ALi2G/eXCdb1dSOzPuKfoh5RgtfXECCK5gY3Vez4UJSfr.",
+      "profile_pic": "",
+      "subscribers": 1,
+      "subscriptions": [
+        "y8tjyeSu7Nc9fS0aZK8O-"
+      ]
+    },
+    {
+      "id": "CrQtcDXnPAZo81LAYnCT9",
+      "username": "test1",
+      "email": "test1@gmail.com",
+      "password_hash": "$2a$10$gA6Z6ENpZLzmxo3ExlbZJOgCm8A2t2b86JoOEuTYBss/54RcyW3Ku",
+      "profile_pic": "/uploads/1774491596771-_vGQC82T.jpg",
+      "subscribers": 0
+    }
+  ],
+  "videos": [
+    {
+      "id": "Gp6qhwGPYuDxl8_iogCnT",
+      "title": "chilling with my boi",
+      "description": "# vlog",
+      "video_url": "/uploads/1769473462765-HtOeTC8G.MOV",
+      "thumbnail": "/uploads/1769473494569-dhw1o_h5",
+      "uploader_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "views": 0,
+      "likes": [
+        "y8tjyeSu7Nc9fS0aZK8O-",
+        "TrQQXeekR5pMGLZZO2LFb"
+      ],
+      "tags": [],
+      "duration": 57,
+      "upload_date": "2026-01-27T00:24:54.582Z"
+    },
+    {
+      "id": "fBKrhbWB1qZC1U-ldViQt",
+      "title": "yeah just me and the boys",
+      "description": "well nothing much but chill vibes #vlog",
+      "video_url": "/uploads/1770160918900-LSWTffK4.MOV",
+      "thumbnail": "/uploads/1770160937181-UEIJycDg",
+      "uploader_id": "TrQQXeekR5pMGLZZO2LFb",
+      "views": 0,
+      "likes": [
+        "TrQQXeekR5pMGLZZO2LFb",
+        "CrQtcDXnPAZo81LAYnCT9"
+      ],
+      "tags": [
+        "#vlog"
+      ],
+      "duration": 57,
+      "upload_date": "2026-02-03T23:22:17.219Z"
+    },
+    {
+      "id": "lDgOZFz63sAStj-2UM-Sx",
+      "title": "ion know too bruh",
+      "description": "yeah just walking the hostel grounds #vlog#fun#school",
+      "video_url": "/uploads/1774485866103-QrM95tq-.mp4",
+      "thumbnail": "/uploads/1774485928023-ZeY3MHti",
+      "uploader_id": "CrQtcDXnPAZo81LAYnCT9",
+      "views": 0,
+      "likes": [
+        "CrQtcDXnPAZo81LAYnCT9"
+      ],
+      "tags": [
+        "#vlog",
+        "#fun",
+        "#school"
+      ],
+      "duration": 209,
+      "upload_date": "2026-03-26T00:45:28.047Z"
+    },
+    {
+      "id": "2R9h58ygkjNALTgrnlDQ7",
+      "title": "what?",
+      "description": "dance?#dancing",
+      "video_url": "/uploads/1774487544415-lddfckI5.mp4",
+      "thumbnail": "",
+      "uploader_id": "CrQtcDXnPAZo81LAYnCT9",
+      "views": 0,
+      "likes": [],
+      "tags": [
+        "#dancing"
+      ],
+      "duration": 59,
+      "upload_date": "2026-03-26T01:12:35.763Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "xqZbVciVyrumomGgWiCps",
+      "video_id": "fBKrhbWB1qZC1U-ldViQt",
+      "user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "text": "ok buddy relax",
+      "timestamp": "2026-03-26T01:30:58.347Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "tmCTUwjkxBoP939vApyU2",
+      "user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_username": "KUTHA",
+      "type": "subscribe",
+      "title": "KUTHA subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-02-03T23:22:55.961Z",
+      "read": false
+    },
+    {
+      "id": "-hOrrV-UzWPAtI0lO5tWt",
+      "user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_username": "KUTHA",
+      "type": "like",
+      "video_id": "Gp6qhwGPYuDxl8_iogCnT",
+      "video_title": "chilling with my boi",
+      "title": "KUTHA liked your video",
+      "message": "\"chilling with my boi\" got a new like",
+      "avatar": "👍",
+      "timestamp": "2026-02-03T23:24:08.128Z",
+      "read": false
+    },
+    {
+      "id": "MFGZpuOJRH6zhwm4VCvS4",
+      "user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_username": "wayne",
+      "type": "subscribe",
+      "title": "wayne subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-02-03T23:39:46.898Z",
+      "read": false
+    },
+    {
+      "id": "LDyZ51kTCs0ORyqvhe1Ve",
+      "user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_username": "KUTHA",
+      "type": "subscribe",
+      "title": "KUTHA subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-02-03T23:41:41.809Z",
+      "read": false
+    },
+    {
+      "id": "WG8D1ngxYHUS2InbmXq2p",
+      "user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_username": "KUTHA",
+      "type": "like",
+      "video_id": "Gp6qhwGPYuDxl8_iogCnT",
+      "video_title": "chilling with my boi",
+      "title": "KUTHA liked your video",
+      "message": "\"chilling with my boi\" got a new like",
+      "avatar": "👍",
+      "timestamp": "2026-02-03T23:41:45.018Z",
+      "read": false
+    },
+    {
+      "id": "d_lWBOYgGMJCQUujEYVI5",
+      "user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "from_username": "test1",
+      "type": "subscribe",
+      "title": "test1 subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-03-26T01:30:45.182Z",
+      "read": false
+    },
+    {
+      "id": "zMHuvgdxPSMdG3N3tkNEn",
+      "user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "from_username": "test1",
+      "type": "comment",
+      "video_id": "fBKrhbWB1qZC1U-ldViQt",
+      "video_title": "yeah just me and the boys",
+      "title": "test1 commented on your video",
+      "message": "\"ok buddy relax\"",
+      "avatar": "💬",
+      "timestamp": "2026-03-26T01:30:58.349Z",
+      "read": false
+    },
+    {
+      "id": "X_b0VoeTs1h-STYon7_XG",
+      "user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "from_username": "test1",
+      "type": "subscribe",
+      "title": "test1 subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-03-26T01:31:19.114Z",
+      "read": false
+    },
+    {
+      "id": "8Fxgu2HHBxGSFj2c-bWOy",
+      "user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "from_username": "test1",
+      "type": "like",
+      "video_id": "fBKrhbWB1qZC1U-ldViQt",
+      "video_title": "yeah just me and the boys",
+      "title": "test1 liked your video",
+      "message": "\"yeah just me and the boys\" got a new like",
+      "avatar": "👍",
+      "timestamp": "2026-03-26T01:46:33.911Z",
+      "read": false
+    },
+    {
+      "id": "DuWTEpLXd_Vc44l_x2_d2",
+      "user_id": "TrQQXeekR5pMGLZZO2LFb",
+      "from_user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "from_username": "test1",
+      "type": "subscribe",
+      "title": "test1 subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-03-26T02:04:47.941Z",
+      "read": false
+    },
+    {
+      "id": "JOummDQp7yzFzIA80bHIE",
+      "user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "from_username": "test1",
+      "type": "subscribe",
+      "title": "test1 subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-03-26T02:27:42.234Z",
+      "read": false
+    },
+    {
+      "id": "t66R-Albn1gtnZaRG62vh",
+      "user_id": "y8tjyeSu7Nc9fS0aZK8O-",
+      "from_user_id": "CrQtcDXnPAZo81LAYnCT9",
+      "from_username": "test1",
+      "type": "subscribe",
+      "title": "test1 subscribed to your channel",
+      "message": "You gained a new subscriber",
+      "avatar": "🔔",
+      "timestamp": "2026-03-26T02:27:46.331Z",
+      "read": false
+    }
+  ]
+}
