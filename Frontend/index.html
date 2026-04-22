@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LumaSphere | Go Crazy</title>
+        <meta name="description" content="A simple video platform UI demo">
+        <link rel="stylesheet" href="style.css">
+        <!-- script is loaded at the end of body -->
+         <link rel="icon" href="assets/LS svg logo.svg" type="image/svg">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-left">
+                <button class="menu-btn" type="button" onclick="toogleSidebar()" aria-label="Toggle sidebar">☰</button>
+                <h1 class="logo">
+                    <img src="assets/tydfyog.png" alt="KUTHA STORE" style=" width: 100px; height: auto;">
+                </h1>
+            </div>
+            <div class="nav-center">
+                <div class="search-box">
+                <input id="searchInput" type="text" placeholder="Search" aria-label="Search">
+                <button type="button" aria-label="Search">🔍</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <input type="file" id="videoUpload" accept="video/*" style="display: none;">
+                <button id="loginBtn" class="icon-button tag" type="button" aria-label="Login">Login</button>
+                <button id="logoutBtn" class="icon-button tag" type="button" style="display:none;" aria-label="Logout">Logout</button>
+                <button class="icon-button tag" type="button" onclick="triggerUpload()" aria-label="Upload video">Upload</button>
+                <button id="notificationBtn" class="icon-btn notification-btn" type="button" aria-label="Notifications">
+                    🔔
+                    <span id="notificationBadge" class="notification-badge" style="display:none;">0</span>
+                </button>
+                <div class="user-avatar">👤</div>
+                <div id="navUsername" style="margin-left:8px;color:#9aa6b2;font-weight:600"></div>
+            </div>
+        </nav>
+        <!-- Notification Panel -->
+        <div id="notificationPanel" class="notification-panel" style="display:none;">
+            <div class="notification-header">
+                <h3>Notifications</h3>
+                <button id="closeNotifications" class="close-notif" aria-label="Close notifications">✖</button>
+            </div>
+            <div id="notificationsList" class="notifications-list"></div>
+        </div>
+        <!-- Profile Panel -->
+        <div id="profilePanel" class="profile-panel" style="display:none;">
+            <div class="profile-header">
+                <h3>Profile</h3>
+                <button id="closeProfile" class="close-profile" aria-label="Close profile">✖</button>
+            </div>
+            <div class="profile-content">
+                <div class="profile-avatar-container">
+                    <img id="profilePicture" class="profile-picture-img" src="" alt="Profile Picture" style="display:none;">
+                    <div id="profileAvatarFallback" class="profile-avatar-large">👤</div>
+                    <input type="file" id="profilePicInput" accept="image/*" style="display: none;">
+                    <button id="uploadProfilePicBtn" class="upload-profile-pic-btn" title="Upload profile picture">📷</button>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-username" id="profileUsername"></div>
+                    <div class="profile-email" id="profileEmail"></div>
+                    <textarea id="profileBio" class="profile-bio" placeholder="Add a bio..." maxlength="200"></textarea>
+                    <button id="saveBioBtn" class="save-bio-btn">Save Bio</button>
+                </div>
+                <button id="signOutBtn" class="sign-out-btn">Sign Out</button>
+            </div>
+        </div>
+        <!-- Image Cropper Modal -->
+        <div id="cropperModal" class="cropper-modal" style="display:none;">
+            <div class="cropper-container">
+                <div class="cropper-header">
+                    <h3>Adjust Image</h3>
+                    <button class="cropper-close" id="closeCropper" aria-label="Close cropper">✖</button>
+                </div>
+                <div class="cropper-body">
+                    <div class="cropper-canvas-wrapper">
+                        <canvas id="cropperCanvas"></canvas>
+                    </div>
+                    <div class="cropper-controls">
+                        <label>
+                            Zoom:
+                            <input type="range" id="zoomSlider" min="1" max="3" step="0.1" value="1" class="zoom-slider">
+                            <span id="zoomValue">100%</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="cropper-footer">
+                    <button id="cancelCropper" class="cropper-btn cropper-btn-cancel">Cancel</button>
+                    <button id="saveCropper" class="cropper-btn cropper-btn-save">Apply</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-body">
+            <aside class="sidebar" id="sidebar">
+                <a href="#" class="active">Home</a>    
+                <a href="#">Trending</a>
+                <a href="#">Subscriptions</a>
+                <hr>
+                <a href="#">Library</a>
+                <a href="#">History</a>
+                <a href="#">Liked Videos</a>
+                <hr>
+                <div class="footer-links">
+                    <p>&copy; 2026 LumaSphere</p>
+                </div>    
+            </aside>
+            <main class="content">
+                <div class="tag-bar">
+                       <button class="tag tagactive">ALL</button>
+                    <button class="tag">Music</button>
+                    <button class="tag">Gaming</button>
+                    <button class="tag">News</button>
+                    <button class="tag">Sports</button>
+                </div>
+                <div class="video-grid" id="videoGrid">
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <img src="" alt="Video Thumbnail">
+                            <span class="duration">10:30</span>
+                        </div>
+                        <div class="video-info">
+                            <div class="avatar">👤</div>
+                     <div class="details">
+                        <h4>Welcome to the Platform</h4>
+                        <p>Admin Channel</p>
+                        <p>1M views • 1 day ago</p>
+                     </div>    
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <img src="" alt="Video Thumbnail">
+                        <span class="duration">3:15</span>
+                    </div>
+                    <div class="video-info">
+                        <div class="avatar">🎵</div>
+                        <div class="details">
+                            <h4>Local Music Hit 2025</h4>
+                            <p>Music Channel</p>
+                            <p>50K views • 2 hours ago</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </main>
+        </div>
+        <script src="script.js"></script>
+        <!-- Auth modal -->
+        <div id="authModal" class="modal" aria-hidden="true" style="display:none;">
+            <div class="modal-panel">
+                <button class="modal-close" aria-label="Close auth dialog">✖</button>
+                <div class="auth-tabs">
+                    <button id="tabLogin" class="tab active">Login</button>
+                    <button id="tabRegister" class="tab">Register</button>
+                </div>
+                <form id="loginForm" class="auth-form">
+                    <input id="loginEmail" type="email" placeholder="Email" required>
+                    <input id="loginPassword" type="password" placeholder="Password" required>
+                    <button type="submit" class="primary">Login</button>
+                </form>
+                <form id="registerForm" class="auth-form" style="display:none;">
+                    <input id="regUsername" type="text" placeholder="Username" required>
+                    <input id="regEmail" type="email" placeholder="Email" required>
+                    <input id="regPassword" type="password" placeholder="Password" required>
+                    <textarea id="regBio" placeholder="Bio (optional)" maxlength="200" rows="3"></textarea>
+                    <div class="profile-pic-upload">
+                        <label for="regProfilePic">Profile Picture (optional)</label>
+                        <input type="file" id="regProfilePic" accept="image/*">
+                        <div id="regProfilePicPreview" class="profile-pic-preview"></div>
+                    </div>
+                    <button type="submit" class="primary">Register</button>
+                </form>
+            </div>
+        </div>
+        <!-- Profile View Modal -->
+        <div id="profileViewModal" class="profile-view-modal" style="display:none;">
+            <div class="profile-view-panel">
+                <button id="closeProfileView" class="close-profile-view" aria-label="Close profile view">✖</button>
+                <div class="profile-view-content">
+                    <div class="profile-view-header">
+                        <div class="profile-view-avatar">
+                            <img id="profileViewPicture" class="profile-view-picture" src="" alt="Profile Picture" style="display:none;">
+                            <div id="profileViewAvatarFallback" class="profile-view-avatar-large">👤</div>
+                        </div>
+                        <div class="profile-view-info">
+                            <div class="profile-view-username" id="profileViewUsername"></div>
+                            <div class="profile-view-stats">
+                                <span id="profileViewSubscribers">0 subscribers</span>
+                                <span id="profileViewVideosCount">0 videos</span>
+                            </div>
+                            <div class="profile-view-bio" id="profileViewBio"></div>
+                        </div>
+                        <button id="profileViewSubscribeBtn" class="profile-view-subscribe-btn">Subscribe</button>
+                    </div>
+                    <div class="profile-view-videos" id="profileViewVideos">
+                        <!-- Videos will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
