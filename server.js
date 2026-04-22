@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve front-end static files
-app.use(express.static(path.join(__dirname, '../Frontend')));
+app.use(express.static(path.join(__dirname, 'Frontend')));
 // Serve uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -637,7 +637,7 @@ app.use((req, res) => {
     return res.status(404).json({ error: 'Not found' });
   }
   // Otherwise, serve index.html for client-side routing
-  res.sendFile(path.join(__dirname, '../Frontend/index.html'));
+  res.sendFile(path.join(__dirname, 'Frontend/index.html'));
 });
 
 app.listen(PORT, '0.0.0.0', () => console.log(`Server running on http://localhost:${PORT} and accessible via http://localhost:3000 (avoid 127.0.0.1 if you prefer)`.replace('http://localhost:3000', `http://localhost:${PORT}`)));
