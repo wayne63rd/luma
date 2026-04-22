@@ -8,8 +8,8 @@ const multer = require('multer');
 const { Low, JSONFile } = require('lowdb');
 const { nanoid } = require('nanoid');
 
-const JWT_SECRET = process.env.JWT_SECRET || '23d3487a705259c28232dc60757134228f96c3d107aee4c8e65164c7622ab5877c889fe2dfd19322cd4e6c44d0c047130060bf81294d5fa06ae5f90ef80d41fe';
-
+const JWT_SECRET = process.env.JWT_SECRET;
+  
 const app = express();
 const PORT = process.env.PORT || 3000;
 const MAX_USERS = process.env.MAX_USERS ? Number(process.env.MAX_USERS) : Infinity; // set to numeric value to cap accounts, default unlimited
