@@ -42,7 +42,7 @@ app.use(express.urlencoded({ extended: true }));
 // Serve front-end static files
 app.use(express.static(path.join(__dirname, 'Frontend')));
 // Serve uploaded files
-app.use('db.json', express.static(path.join(__dirname, 'db.json')));
+app.use('db.json', express.static(path.join(__dirname, 'data', 'db.json')));
 
 // Multer for file uploads
 const storage = multer.diskStorage({
