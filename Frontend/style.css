@@ -28,7 +28,8 @@ body{
     display: flex;
     align-items: center;
     gap: 15px;
-}.logo {
+}
+.logo {
     font-size :22px;
     font-weight: bold;
     letter-spacing: -1px;
@@ -36,6 +37,9 @@ body{
     color: #00FFFF;
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
 }
+.logo:hover{
+      box-shadow: 0 0 10px #00FFFF;
+} 
 .menu-btn {
     background: none;
     border: none;
